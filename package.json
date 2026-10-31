@@ -5,6 +5,7 @@
   "type": "module",
   "engines": { "node": ">=22.13.0" },
   "scripts": {
+    "test": "node --test tests/migration.test.mjs",
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "start": "node scripts/serve.mjs --dist"

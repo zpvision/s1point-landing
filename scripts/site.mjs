@@ -7,9 +7,9 @@ for (const filename of ['.env.local', '.env']) {
   const file = path.join(root, filename);
   if (existsSync(file)) process.loadEnvFile(file);
 }
-const app = new URL(process.env.APP_URL || 'http://localhost:5174');
+const app = new URL(process.env.APP_URL || 'https://app.2point.ru');
 if (!['http:', 'https:'].includes(app.protocol) || app.username || app.password || app.pathname !== '/' || app.search || app.hash) {
-  throw new Error('APP_URL must be an HTTP(S) origin, e.g. https://app.s1point.ru');
+  throw new Error('APP_URL must be an HTTP(S) origin, e.g. https://app.2point.ru');
 }
 export const appOrigin = app.origin;
 export const pages = {
